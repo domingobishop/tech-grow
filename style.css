@@ -1,0 +1,294 @@
+/*
+Theme Name:     Tech Grow 2017
+Theme URI:      https://github.com/domingobishop/tech-grow
+Author:         Chris Bishop
+Description:    Tech Grow WordPress themes. 
+Author URI:     https://github.com/domingobishop
+Version:        0.1.0 beta
+License:		Creative Commons Attribution-Share Alike 3.0 (http://creativecommons.org/licenses/by-sa/3.0/. Feel free to make any changes.
+Text Domain:    tech-grow
+*/
+
+/**
+ * Global
+ * ----------------------------------------------------------------------------
+ */
+
+body {
+    font-family: "Open Sans", Helvetica, Arial, sans-serif, sansserif;
+    /*The weights are 300 (light), 400 (normal), 600 (semibold), and 700 (bold) and the only acceptable CSS keyword is "normal". */
+    text-rendering: optimizeLegibility;
+    color: #222;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 1.6em 0 1em;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2.6em;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+h4 {
+    font-weight: 700;
+}
+
+.entry-header h1 {
+    margin: 2.4em 0 1.6em;
+    font-size: 2.4em;
+}
+
+p {
+    margin: 0 0 1.6em;
+}
+
+a {
+    color: #337ab7;
+}
+
+a:hover, a:focus {
+    color: #3b94d9;
+    text-decoration: none;
+}
+
+.entry-content a {
+    text-decoration: underline;
+}
+
+.entry-content a:hover, .entry-content a:focus {
+    text-decoration: none;
+}
+
+ul {
+    margin-bottom: 1.6em;
+}
+
+.page .entry-content, .single .entry-content {
+    min-height: 360px;
+}
+
+/**
+ * Forms
+ * ----------------------------------------------------------------------------
+ */
+
+.contact-form textarea,
+.contact-form input[type=email], .contact-form input[type=text] {
+    width: 98%;
+    max-width: 98%;
+    margin-bottom: 1.9em;
+}
+.contact-form input[type=checkbox], .contact-form input[type=radio] {
+    float: left !important;
+    position: relative;
+    margin: 7px 1em 1em 0 !important;
+}
+.contact-form label.checkbox, .contact-form label.radio {
+    margin-bottom: 1.6em !important;
+}
+
+/**
+ * Nav
+ * ----------------------------------------------------------------------------
+ */
+
+.navbar {
+    margin: 0;
+    text-transform: uppercase;
+    border-radius: 0;
+    border: none;
+    background: #eee;
+}
+
+.navbar-nav > li > a {
+    padding-bottom: 1em;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #000;
+    border-top: solid 4px transparent;
+}
+
+.navbar-default .navbar-brand {
+    font-weight: 700;
+    color: #000;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #3b94d9;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    border-top: solid 4px #3b94d9;
+}
+
+.navbar-default .navbar-nav > li.current-menu-item > a {
+    border-top: solid 4px #3b94d9;
+}
+
+/**
+ * Footer
+ * ----------------------------------------------------------------------------
+ */
+
+footer {
+    padding: 1em 0;
+    background-color: #e4eaea;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer .site-info {
+    padding: 1em;
+}
+
+/**
+ * Home
+ * ----------------------------------------------------------------------------
+ */
+
+.banner h1 {
+    font-size: 4em;
+    margin: 1.6em 0 0.5em;
+}
+
+.cat-nav {
+    margin-bottom: 1em;
+}
+
+.cat-nav .btn {
+    margin-bottom: 0.5em;
+}
+
+.paged-posts {
+    margin-bottom: 1.6em;
+}
+
+nav .previous {
+    float: left;
+}
+
+nav .next {
+    float: right;
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active,
+.open > .dropdown-toggle.btn-default {
+    color: #fff;
+    text-decoration: none;
+    background-color: #3b94d9;
+}
+
+/**
+ * Cards
+ * ----------------------------------------------------------------------------
+ */
+
+.cards h1, .cards h2 {
+    color: #337ab7;
+    font-family: 'Zilla Slab Highlight', Helvetica, Arial, sans-serif, sansserif;
+}
+
+.cards article {
+    margin-bottom: 2em;
+}
+
+.cards h2 {
+    margin: 0 0 0.5em;
+}
+
+.cards .entry-content {
+    padding-bottom: 1em;
+    background-color: #e4eaea;
+}
+
+.cards .entry-header {
+    padding-right: 2em;
+}
+
+.cards .entry-summary, .cards .entry-btn {
+    padding: 0 1em;
+}
+
+.cards .entry-thumbnail {
+    max-height: 200px;
+    overflow: hidden;
+}
+
+.cards .btn-default {
+    color: #95a5a6;
+    background-color: #fff;
+}
+
+.cards .entry-content a {
+    text-decoration: none;
+}
+
+/**
+* Images
+* ----------------------------------------------------------------------------
+*/
+
+.wp-caption.aligncenter, img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.entry-content img.alignright, .entry-content .wp-caption.alignright {
+    margin-right: 0px;
+    float: right;
+}
+
+.entry-content img.alignnone {
+    margin: 1.6em 0;
+}
+
+.wp-caption.alignright, img.alignright {
+    margin: 5px 0 5px 20px;
+}
+
+.entry-content img.alignleft, .entry-content .wp-caption.alignleft {
+    margin-left: 0px;
+    float: left;
+}
+
+.wp-caption.alignleft, img.alignleft {
+    margin: 5px 20px 5px 0px;
+}
+
+.wp-caption .wp-caption-text, .entry-caption, .gallery-caption {
+    color: #220e10;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 300;
+    padding: 1em;
+    background: #eee;
+}
+
+iframe {
+    margin: 1.6em 0;
+}
