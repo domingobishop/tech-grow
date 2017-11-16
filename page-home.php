@@ -5,7 +5,7 @@
  */
 get_header(); ?>
 
-    <main id="main" class="main" role="main">
+    <main id="main" class="main homepage" role="main">
     <div id="tech_carousel" class="banner carousel slide" data-ride="carousel" role="banner">
         <ol class="carousel-indicators">
             <li data-target="#tech_carousel" data-slide-to="0" class="active"></li>
@@ -19,21 +19,43 @@ get_header(); ?>
         </div>
     </div>
         <div class="content">
+            <div class="intro">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <?php while (have_posts()) : the_post(); ?>
+                                <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                                    <div class="entry-header sr-only">
+                                        <h1>
+                                            <?php the_title(); ?>
+                                        </h1>
+                                    </div>
+                                    <div class="entry-content">
+                                        <?php the_content(); ?>
+                                    </div>
+                                </article>
+                            <?php endwhile; ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                        <?php while (have_posts()) : the_post(); ?>
-                            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                                <div class="entry-header">
-                                    <h1>
-                                        <?php the_title(); ?>
-                                    </h1>
+                        <div class="row promo-area">
+                            <?php for ( $i=1 ; $i<=4 ; $i++ ) { ?>
+                                <div class="col-md-6">
+                                    <a href="<?php echo esc_attr(get_option('promo_url_'.$i)); ?>">
+                                        <div class="promo-img">
+                                            <img src="<?php echo esc_attr(apply_https(get_option('promo_img_'.$i))); ?>" class="img-responsive">
+                                        </div>
+                                        <div class="promo-text text-center">
+                                            <p><?php echo esc_attr(get_option('promo_txt_'.$i)); ?></p>
+                                        </div>
+                                    </a>
                                 </div>
-                                <div class="entry-content">
-                                    <?php the_content(); ?>
-                                </div>
-                            </article>
-                        <?php endwhile; ?>
+                            <?php } ?>
+                        </div>
                     </div>
                 </div>
             </div>
