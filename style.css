@@ -184,12 +184,20 @@ footer .site-info {
 .homepage .promo-area {
 
 }
-.cat-nav {
-    margin-bottom: 1em;
+.promo-area > div {
+    margin-bottom: 1.6em;
 }
-
-.cat-nav .btn {
-    margin-bottom: 0.5em;
+.promo-item {
+    padding: 0.5em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 4px 5px #ddd;
+}
+.promo-logo img {
+    margin: 0 auto;
+    max-width: 140px;
+    height: auto;
+    padding: 0.5em;
 }
 
 .paged-posts {

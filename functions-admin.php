@@ -35,12 +35,15 @@ function tech_settings_page()
     <style>
         .tech-admin input[type=text] {
             width: 100%;
-            max-width: 320px;
+            max-width: 480px;
         }
         .tech-admin textarea {
             width: 100%;
-            max-width: 320px;
+            max-width: 480px;
             height: 12em;
+        }
+        .tech-admin td.help-text {
+            width: 30%;
         }
     </style>
     <div class="tech-admin wrap">
@@ -55,17 +58,17 @@ function tech_settings_page()
                 <tr valign="top">
                     <th scope="row"><label for="slider_img_1">Image 1</label></th>
                     <td><input type="text" name="slider_img_1" value="<?php echo esc_attr( get_option('slider_img_1') ); ?>" /></td>
-                    <td>Image size 1600px x 750px</td>
+                    <td class="help-text">Image size 1600px x 750px, image format JPEG quality 7</td>
                 </tr>
                 <tr valign="top">
                     <th scope="row"><label for="slider_img_2">Image 2</label></th>
                     <td><input type="text" name="slider_img_2" value="<?php echo esc_attr( get_option('slider_img_2') ); ?>" /></td>
-                    <td>Image size 1600px x 750px</td>
+                    <td class="help-text">Image size 1600px x 750px, image format JPEG quality 7</td>
                 </tr>
                 <tr valign="top">
                     <th scope="row"><label for="slider_img_3">Image 3</label></th>
                     <td><input type="text" name="slider_img_3" value="<?php echo esc_attr( get_option('slider_img_3') ); ?>" /></td>
-                    <td>Image size 1600px x 750px</td>
+                    <td class="help-text">Image size 1600px x 750px, image format JPEG quality 7</td>
                 </tr>
             </table>
             <?php submit_button(); ?>
@@ -80,12 +83,12 @@ function tech_settings_page()
                 <tr valign="top">
                     <th scope="row"><label for="promo_img_<?php echo $i; ?>">Image</label></th>
                     <td><input type="text" name="promo_img_<?php echo $i; ?>" value="<?php echo esc_attr( get_option('promo_img_'.$i) ); ?>" /></td>
-                    <td>Image size 480px x 480px</td>
+                    <td class="help-text">Image size 480px x 270px, image format JPEG quality 7</td>
                 </tr>
                 <tr valign="top">
                     <th scope="row"><label for="promo_logo_<?php echo $i; ?>">Logo</label></th>
                     <td><input type="text" name="promo_logo_<?php echo $i; ?>" value="<?php echo esc_attr( get_option('promo_logo_'.$i) ); ?>" /></td>
-                    <td>Image size 480px x 480px</td>
+                    <td class="help-text">Image size max 140px x 140px, image format PNG-24 with transparent background</td>
                     </tr>
                 <tr valign="top">
                     <th scope="row"><label for="promo_txt_<?php echo $i; ?>">Label</label></th>

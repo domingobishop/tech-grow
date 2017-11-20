@@ -45,14 +45,19 @@ get_header(); ?>
                         <div class="row promo-area">
                             <?php for ( $i=1 ; $i<=4 ; $i++ ) { ?>
                                 <div class="col-md-6">
-                                    <a href="<?php echo esc_attr(get_option('promo_url_'.$i)); ?>">
-                                        <div class="promo-img">
-                                            <img src="<?php echo esc_attr(apply_https(get_option('promo_img_'.$i))); ?>" class="img-responsive">
-                                        </div>
-                                        <div class="promo-text text-center">
-                                            <p><?php echo esc_attr(get_option('promo_txt_'.$i)); ?></p>
-                                        </div>
-                                    </a>
+                                    <div class="promo-item">
+                                        <a href="<?php echo esc_attr(get_option('promo_url_'.$i)); ?>">
+                                            <div class="promo-img">
+                                                <img src="<?php echo esc_attr(apply_https(get_option('promo_img_'.$i))); ?>" class="img-responsive">
+                                            </div>
+                                            <div class="promo-logo">
+                                                <img src="<?php echo esc_attr(apply_https(get_option('promo_logo_'.$i))); ?>" class="img-responsive">
+                                            </div>
+                                            <div class="promo-text text-center">
+                                                <p><?php echo esc_attr(get_option('promo_txt_'.$i)); ?></p>
+                                            </div>
+                                        </a>
+                                    </div>
                                 </div>
                             <?php } ?>
                         </div>
