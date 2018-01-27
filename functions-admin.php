@@ -13,6 +13,9 @@ function tech_settings() {
 
 function tech_settings_data() {
 
+    register_setting('tech_settings_group', 'header_btn_text');
+    register_setting('tech_settings_group', 'header_btn_link');
+
     register_setting('tech_settings_group', 'slider_img_1');
     register_setting('tech_settings_group', 'slider_img_2');
     register_setting('tech_settings_group', 'slider_img_3');
@@ -26,6 +29,10 @@ function tech_settings_data() {
         register_setting('tech_settings_group', 'promo_txt_'.$i);
         register_setting('tech_settings_group', 'promo_url_'.$i);
     }
+
+    register_setting('tech_settings_group', 'footer_address');
+    register_setting('tech_settings_group', 'footer_dealer_label');
+    register_setting('tech_settings_group', 'footer_dealer_link');
 }
 
 function tech_settings_page()
@@ -52,6 +59,18 @@ function tech_settings_page()
         <form method="post" action="options.php" novalidate="novalidate">
             <?php settings_fields( 'tech_settings_group' ); ?>
             <?php do_settings_sections( 'tech_settings_group' ); ?>
+            <table class="form-table">
+                <h3>Header</h3>
+                <tr valign="top">
+                    <th scope="row"><label for="header_btn_text">Button text</label></th>
+                    <td><input type="text" name="header_btn_text" value="<?php echo esc_attr( get_option('header_btn_text') ); ?>" /></td>
+                </tr>
+                <tr valign="top">
+                    <th scope="row"><label for="header_btn_link">Button link</label></th>
+                    <td><input type="text" name="header_btn_link" value="<?php echo esc_attr( get_option('header_btn_link') ); ?>" /></td>
+                </tr>
+            </table>
+            <?php submit_button(); ?>
             <table class="form-table">
                 <h3>Homapage image slider</h3>
                 <p>Copy/paste the image URL from the Media Library. Please crop images with the focus is in the centre.</p>
@@ -101,6 +120,22 @@ function tech_settings_page()
                     <td></td>
                 </tr>
                 <?php } ?>
+            </table>
+            <?php submit_button(); ?>
+            <table class="form-table">
+                <h3>Footer</h3>
+                <tr valign="top">
+                    <th scope="row"><label for="footer_address">Address</label></th>
+                    <td><textarea name="footer_address"><?php echo esc_attr( get_option('footer_address') ); ?></textarea></td>
+                </tr>
+                <tr valign="top">
+                    <th scope="row"><label for="footer_dealer_label">Dealer link label</label></th>
+                    <td><input type="text" name="footer_dealer_label" value="<?php echo esc_attr( get_option('footer_dealer_label') ); ?>" /></td>
+                </tr>
+                <tr valign="top">
+                    <th scope="row"><label for="footer_dealer_link">Dealer link</label></th>
+                    <td><input type="text" name="footer_dealer_link" value="<?php echo esc_attr( get_option('footer_dealer_link') ); ?>" /></td>
+                </tr>
             </table>
             <?php submit_button(); ?>
             <table class="form-table">

@@ -78,6 +78,13 @@ ul {
 
 }
 
+.logo {
+    margin: 1em 0;
+}
+.contact-btn {
+    margin: 1em 0;
+}
+
 /**
  * Forms
  * ----------------------------------------------------------------------------
@@ -108,7 +115,8 @@ ul {
     text-transform: uppercase;
     border-radius: 0;
     border: none;
-    background: #eee;
+    color: #fff;
+    background: #003366;
 }
 
 .navbar-nav > li > a {
@@ -116,29 +124,24 @@ ul {
 }
 
 .navbar-default .navbar-nav > li > a {
-    color: #000;
+    color: #fff;
     border-top: solid 4px transparent;
-}
-
-.navbar-default .navbar-brand {
-    font-weight: 700;
-    color: #000;
 }
 
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus,
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-    color: #3b94d9;
+    color: #0099ff;
 }
 
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-    border-top: solid 4px #3b94d9;
+
 }
 
 .navbar-default .navbar-nav > li.current-menu-item > a {
-    border-top: solid 4px #3b94d9;
+
 }
 
 /**
@@ -147,8 +150,9 @@ ul {
  */
 
 footer {
+    color: #fff;
     padding: 1em 0;
-    background-color: #e4eaea;
+    background-color: #003366;
 }
 
 footer ul {
@@ -158,6 +162,15 @@ footer ul {
 
 footer .site-info {
     padding: 1em;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+footer .facebook-widget {
+    overflow: hidden;
 }
 
 /**
@@ -176,7 +189,7 @@ footer .site-info {
     height: 420px;
 }
 .homepage .intro {
-    background-color: #2e6da4;
+    background-color: #003366;
     color: #fff;
     padding: 1.4em;
     margin-bottom: 1.6em;

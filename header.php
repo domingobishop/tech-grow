@@ -20,16 +20,20 @@
         <div class="brand">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
-                        <a class="navbar-brand" href="<?php bloginfo('siteurl'); ?>/"
+                    <div class="col-md-6 logo">
+                        <a href="<?php bloginfo('siteurl'); ?>/"
                            title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>">
-                            <?php bloginfo('name'); ?>
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/logo.jpg" alt="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" class="img-responsive">
                         </a>
                     </div>
-                    <div class="col-md-6 text-right">
-                        <p>
-                            Enquire
-                        </p>
+                    <div class="col-md-6 text-right contact">
+                        <?php if ( get_option('header_btn_link') ) { ?>
+                            <div class="contact-btn">
+                                <a href="<?php echo esc_attr( get_option('header_btn_link') ); ?>" type="button" class="btn btn-default">
+                                    <?php echo esc_attr( get_option('header_btn_text') ); ?>
+                                </a>
+                            </div>
+                        <?php } ?>
                     </div>
                 </div>
             </div>

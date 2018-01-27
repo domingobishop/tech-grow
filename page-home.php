@@ -44,6 +44,7 @@ get_header(); ?>
                     <div class="col-md-8 col-md-offset-2">
                         <div class="row promo-area">
                             <?php for ( $i=1 ; $i<=4 ; $i++ ) { ?>
+                                <?php if ( get_option('promo_url_'.$i) ) { ?>
                                 <div class="col-md-6">
                                     <div class="promo-item">
                                         <a href="<?php echo esc_attr(get_option('promo_url_'.$i)); ?>">
@@ -59,6 +60,7 @@ get_header(); ?>
                                         </a>
                                     </div>
                                 </div>
+                                <?php } ?>
                             <?php } ?>
                         </div>
                     </div>
