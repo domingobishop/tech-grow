@@ -42,7 +42,7 @@ get_header(); ?>
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                        <div class="row promo-area">
+                        <div class="row promo-area section-2">
                             <?php for ( $i=1 ; $i<=4 ; $i++ ) { ?>
                                 <?php if ( get_option('promo_url_'.$i) ) { ?>
                                 <div class="col-md-6">
@@ -63,6 +63,59 @@ get_header(); ?>
                                 <?php } ?>
                             <?php } ?>
                         </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <?php
+                            global $post;
+                            $title      = get_post_meta( $post->ID, 'sub_title', true );
+                            $content    = get_post_meta( $post->ID, 'sub_content', true );
+                        ?>
+                        <article class="section-3 text-center">
+                            <div class="entry-header">
+                                <h2>
+                                    <?php echo $title; ?>
+                                </h2>
+                            </div>
+                            <div class="entry-content">
+                                <?php echo $content; ?>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <?php
+                        $sub_image      = get_post_meta( $post->ID, 'sub_image', true );
+                        $caption     = get_post_meta( $post->ID, 'sub_image_caption', true );
+                        if ( $sub_image ) {
+                            ?>
+                            <article class="section-4 clearfix">
+                                <div class="entry-content">
+                                    <img src="<?php echo $sub_image; ?>" class="img-responsive">
+                                    <p>
+                                        <?php echo $caption; ?>
+                                    </p>
+                                </div>
+                            </article>
+                        <?php } ?>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <?php
+                        $video      = get_post_meta( $post->ID, 'video_code', true );
+                        if ( $video ) {
+                        ?>
+                        <article class="section-5 clearfix">
+                            <div class="entry-content">
+                                <div class="videoWrapper">
+                                    <?php echo $video; ?>
+                                </div>
+                            </div>
+                        </article>
+                        <?php } ?>
                     </div>
                 </div>
             </div>

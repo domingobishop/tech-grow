@@ -213,6 +213,10 @@ footer .facebook-widget {
     padding: 0.5em;
 }
 
+.section-3, .section-4, .section-5 {
+    margin-bottom: 1.6em;
+}
+
 .paged-posts {
     margin-bottom: 1.6em;
 }
@@ -233,6 +237,20 @@ nav .next {
     color: #fff;
     text-decoration: none;
     background-color: #3b94d9;
+}
+
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 /**
@@ -324,6 +342,3 @@ nav .next {
     background: #eee;
 }
 
-iframe {
-    margin: 1.6em 0;
-}
