@@ -74,7 +74,7 @@ get_header(); ?>
                                 </h2>
                             </div>
                             <div class="entry-content">
-                                <?php echo esc_attr(apply_https(get_option('sub_content'))); ?>
+                                <?php echo wpautop(apply_https(get_option('sub_content'))); ?>
                             </div>
                         </article>
                     </div>

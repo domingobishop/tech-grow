@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-md-8 site-info">
           <div class="footer-address">
-              <?php echo esc_attr(get_option('footer_address')); ?>
+              <?php echo wpautop(get_option('footer_address')); ?>
           </div>
       </div>
         <?php $facebook_js = get_option('facebook_js_widget');

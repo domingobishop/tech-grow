@@ -46,7 +46,7 @@ function tech_settings_page()
     // admin
     ?>
     <style>
-        .tech-admin input[type=text] {
+        .tech-admin input[type=text], .tech-admin .wp-editor-wrap {
             width: 100%;
             max-width: 480px;
         }
@@ -136,7 +136,18 @@ function tech_settings_page()
                 </tr>
                 <tr valign="top">
                     <th scope="row"><label for="sub_content">Content</label></th>
-                    <td><textarea name="sub_content"><?php echo esc_attr( get_option('sub_content') ); ?></textarea></td>
+                    <td>
+                        <?php
+                        $args        = array(
+                            'media_buttons' => false,
+                            'textarea_rows' => 4,
+                            'tinymce'       => false,
+                            'quicktags'     => array( 'buttons' => 'strong,em,ul,ol,li,link' ),
+                            'wpautop'       => false
+                        );
+                        wp_editor( get_option('sub_content'), 'sub_content', $args );
+                        ?>
+                    </td>
                 </tr>
                 <tr valign="top">
                     <th scope="row"><label for="sub_image">Image URL</label></th>
@@ -156,7 +167,18 @@ function tech_settings_page()
                 <h3>Footer</h3>
                 <tr valign="top">
                     <th scope="row"><label for="footer_address">Address</label></th>
-                    <td><textarea name="footer_address"><?php echo esc_attr( get_option('footer_address') ); ?></textarea></td>
+                    <td>
+                        <?php
+                        $args        = array(
+                            'media_buttons' => false,
+                            'textarea_rows' => 4,
+                            'tinymce'       => false,
+                            'quicktags'     => array( 'buttons' => 'strong,em,ul,ol,li,link' ),
+                            'wpautop'       => false
+                        );
+                        wp_editor( get_option('footer_address'), 'footer_address', $args );
+                        ?>
+                    </td>
                 </tr>
                 <tr valign="top">
                     <th scope="row"><label for="footer_dealer_label">Dealer link label</label></th>
