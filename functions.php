@@ -1,11 +1,6 @@
 <?php
 
-include 'create-meta-box.php';
 include 'functions-admin.php';
-include 'functions-home.php';
-
-add_action( 'init', 'home_meta_boxes' );
-add_action( 'init', 'page_meta_boxes' );
 
 // Enqueue styles and scripts
 function bc_styles() {

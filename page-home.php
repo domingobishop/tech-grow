@@ -67,19 +67,14 @@ get_header(); ?>
                 </div>
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                        <?php
-                            global $post;
-                            $title      = get_post_meta( $post->ID, 'sub_title', true );
-                            $content    = get_post_meta( $post->ID, 'sub_content', true );
-                        ?>
                         <article class="section-3 text-center">
                             <div class="entry-header">
                                 <h2>
-                                    <?php echo $title; ?>
+                                    <?php echo esc_attr(apply_https(get_option('sub_title'))); ?>
                                 </h2>
                             </div>
                             <div class="entry-content">
-                                <?php echo $content; ?>
+                                <?php echo esc_attr(apply_https(get_option('sub_content'))); ?>
                             </div>
                         </article>
                     </div>
@@ -87,15 +82,14 @@ get_header(); ?>
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                         <?php
-                        $sub_image      = get_post_meta( $post->ID, 'sub_image', true );
-                        $caption     = get_post_meta( $post->ID, 'sub_image_caption', true );
+                        $sub_image = esc_attr(apply_https(get_option('sub_image')));
                         if ( $sub_image ) {
                             ?>
                             <article class="section-4 clearfix">
                                 <div class="entry-content">
                                     <img src="<?php echo $sub_image; ?>" class="img-responsive">
                                     <p>
-                                        <?php echo $caption; ?>
+                                        <?php echo esc_attr(apply_https(get_option('sub_image_caption'))); ?>
                                     </p>
                                 </div>
                             </article>
@@ -105,7 +99,7 @@ get_header(); ?>
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                         <?php
-                        $video      = get_post_meta( $post->ID, 'video_code', true );
+                        $video      = get_option('video_code');
                         if ( $video ) {
                         ?>
                         <article class="section-5 clearfix">

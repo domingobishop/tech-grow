@@ -33,6 +33,12 @@ function tech_settings_data() {
     register_setting('tech_settings_group', 'footer_address');
     register_setting('tech_settings_group', 'footer_dealer_label');
     register_setting('tech_settings_group', 'footer_dealer_link');
+
+    register_setting('tech_settings_group', 'sub_title');
+    register_setting('tech_settings_group', 'sub_content');
+    register_setting('tech_settings_group', 'sub_image');
+    register_setting('tech_settings_group', 'sub_image_caption');
+    register_setting('tech_settings_group', 'video_code');
 }
 
 function tech_settings_page()
@@ -120,6 +126,30 @@ function tech_settings_page()
                     <td></td>
                 </tr>
                 <?php } ?>
+            </table>
+            <?php submit_button(); ?>
+            <table class="form-table">
+                <h3>Homepage content area (below promo area)</h3>
+                <tr valign="top">
+                    <th scope="row"><label for="sub_title">Heading</label></th>
+                    <td><input type="text" name="sub_title" value="<?php echo esc_attr( get_option('sub_title') ); ?>" /></td>
+                </tr>
+                <tr valign="top">
+                    <th scope="row"><label for="sub_content">Content</label></th>
+                    <td><textarea name="sub_content"><?php echo esc_attr( get_option('sub_content') ); ?></textarea></td>
+                </tr>
+                <tr valign="top">
+                    <th scope="row"><label for="sub_image">Image URL</label></th>
+                    <td><input type="text" name="sub_image" value="<?php echo esc_attr( get_option('sub_image') ); ?>" /></td>
+                </tr>
+                <tr valign="top">
+                    <th scope="row"><label for="sub_image_caption">Image caption</label></th>
+                    <td><input type="text" name="sub_image_caption" value="<?php echo esc_attr( get_option('sub_image_caption') ); ?>" /></td>
+                </tr>
+                <tr valign="top">
+                    <th scope="row"><label for="video_code">Video code</label></th>
+                    <td><textarea name="video_code"><?php echo esc_attr( get_option('video_code') ); ?></textarea></td>
+                </tr>
             </table>
             <?php submit_button(); ?>
             <table class="form-table">

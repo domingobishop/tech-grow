@@ -22,7 +22,6 @@
                             </div>
                             <div class="entry-header clearfix">
                             <?php
-                            $content = get_post_meta( $post->ID, 'header_content', true );
                             $logo = '<img src="'.get_post_meta( $post->ID, 'header_logo', true ).'" class="img-responsive">';
                             ?>
                                 <div class="row">
@@ -30,7 +29,7 @@
                                         <div class="page-logo">
                                             <?php echo $logo; ?>
                                         </div>
-                                        <?php echo $content; ?>
+                                        <?php the_excerpt(); ?>
                                     </div>
                                     <div class="col-sm-6">
                                         <?php echo $img; ?>
