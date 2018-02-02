@@ -107,7 +107,7 @@ function page_meta_boxes() {
                     'desc' => '',
                     'id' => 'header_logo',
                     'type' => 'text',
-                    'std' => ''
+                    'std' => 'Logo max size 240px x 135px'
                 ),
                 array(
                     'name' => 'Content',
