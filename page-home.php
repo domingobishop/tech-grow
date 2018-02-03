@@ -43,7 +43,7 @@ get_header(); ?>
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
+                    <div class="col-md-10 col-md-offset-1">
                         <div class="row promo-area section-2">
                             <?php for ( $i=1 ; $i<=4 ; $i++ ) { ?>
                                 <?php if ( get_option('promo_url_'.$i) ) { ?>
@@ -68,7 +68,7 @@ get_header(); ?>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
+                    <div class="col-md-10 col-md-offset-1">
                         <article class="section-3 text-center">
                             <div class="entry-header">
                                 <h2>
