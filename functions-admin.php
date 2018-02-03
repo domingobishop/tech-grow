@@ -19,6 +19,7 @@ function tech_settings_data() {
     register_setting('tech_settings_group', 'slider_img_1');
     register_setting('tech_settings_group', 'slider_img_2');
     register_setting('tech_settings_group', 'slider_img_3');
+    register_setting('tech_settings_group', 'slider_img_4');
 
     register_setting('tech_settings_group', 'facebook_widget');
     register_setting('tech_settings_group', 'facebook_js_widget');
@@ -93,6 +94,11 @@ function tech_settings_page()
                 <tr valign="top">
                     <th scope="row"><label for="slider_img_3">Image 3</label></th>
                     <td><input type="text" name="slider_img_3" value="<?php echo esc_attr( get_option('slider_img_3') ); ?>" /></td>
+                    <td class="help-text">Image size 1600px x 750px, image format JPEG quality 7</td>
+                </tr>
+                <tr valign="top">
+                    <th scope="row"><label for="slider_img_4">Image 4</label></th>
+                    <td><input type="text" name="slider_img_4" value="<?php echo esc_attr( get_option('slider_img_4') ); ?>" /></td>
                     <td class="help-text">Image size 1600px x 750px, image format JPEG quality 7</td>
                 </tr>
             </table>

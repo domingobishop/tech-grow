@@ -5,6 +5,11 @@
           <div class="footer-address">
               <?php echo wpautop(get_option('footer_address')); ?>
           </div>
+          <div class="dealer-link">
+              <a href="<?php echo esc_attr( get_option('footer_dealer_link') ); ?>">
+                <?php echo esc_attr( get_option('footer_dealer_label') ); ?>
+              </a>
+          </div>
       </div>
         <?php $facebook_js = get_option('facebook_js_widget');
         if ($facebook_js) {
@@ -22,7 +27,7 @@
   </div>
   <div class="container">
       <div class="row">
-          <div class="col-md-12 text-center clearfix">
+          <div class="col-md-12 clearfix">
               <p><small>Copyright © <?php echo date("Y"); ?> <br>
                       Website by <a href="http://creatistic.com.au/" target="_blank">Creatistic</a></small></p>
           </div>
