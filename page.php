@@ -23,18 +23,33 @@
                             <div class="entry-header clearfix">
                             <?php
                             $logo = '<img src="'.get_post_meta( $post->ID, 'header_logo', true ).'" class="img-responsive">';
-                            ?>
+
+                            if ( $img ) { ?>
                                 <div class="row">
                                     <div class="col-sm-6">
+                                        <?php if ( $logo ) { ?>
                                         <div class="page-logo">
                                             <?php echo $logo; ?>
                                         </div>
+                                        <?php } ?>
                                         <?php the_excerpt(); ?>
                                     </div>
                                     <div class="col-sm-6">
                                         <?php echo $img; ?>
                                     </div>
                                 </div>
+                            <?php } else { ?>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <?php if ( $logo ) { ?>
+                                        <div class="page-logo">
+                                            <?php echo $logo; ?>
+                                        </div>
+                                        <?php } ?>
+                                        <?php the_excerpt(); ?>
+                                    </div>
+                                </div>
+                            <?php } ?>
                             </div>
                             <div class="entry-content">
                                 <?php the_content(); ?>
