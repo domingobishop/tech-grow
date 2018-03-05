@@ -21,17 +21,20 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 logo">
-                        <a href="<?php bloginfo('siteurl'); ?>/"
-                           title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/logo.jpg" alt="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" class="img-responsive">
+                        <a href="<?php home_url(); ?>/"
+                           title="<?php echo bloginfo('name'); ?>">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/logo.jpg" alt="<?php echo bloginfo('name'); ?>" class="img-responsive">
                         </a>
                     </div>
                     <div class="col-md-6 text-right contact">
                         <?php if ( get_option('header_btn_link') ) { ?>
                             <div class="contact-btn">
-                                <a href="<?php echo esc_attr( get_option('header_btn_link') ); ?>" type="button" class="btn btn-default btn-lg">
+                                <a href="<?php echo esc_attr( get_option('header_btn_link') ); ?>" type="button" class="btn btn-default btn-md">
                                     <?php echo esc_attr( get_option('header_btn_text') ); ?>
                                 </a>
+                            </div>
+                            <div class="tag-line">
+                                <?php echo bloginfo('description'); ?>
                             </div>
                         <?php } ?>
                     </div>

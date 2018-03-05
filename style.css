@@ -142,9 +142,13 @@ ul {
 }
 
 /**
- * Footer
+ * Header and footer
  * ----------------------------------------------------------------------------
  */
+
+.tag-line {
+    font-family: 'Shadows Into Light Two', cursive;
+}
 
 footer {
     color: #fff;
