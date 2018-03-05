@@ -18,7 +18,7 @@ body {
     font-family: "Open Sans", Helvetica, Arial, sans-serif, sansserif;
     /*The weights are 300 (light), 400 (normal), 600 (semibold), and 700 (bold) and the only acceptable CSS keyword is "normal". */
     text-rendering: optimizeLegibility;
-    color: #222;
+    color: #003366;
     font-size: 18px;
     line-height: 1.6;
 }
@@ -224,6 +224,10 @@ footer .facebook-widget {
     max-width: 140px;
     height: auto;
     padding: 0.5em;
+}
+.promo-img {
+    max-height: 240px;
+    overflow: hidden;
 }
 
 .section-3, .section-4, .section-5 {
