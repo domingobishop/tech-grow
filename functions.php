@@ -31,13 +31,6 @@ function register_my_menu() {
 
 add_theme_support( 'post-thumbnails' );
 
-// Replaces the excerpt "more" text by a link
-function new_excerpt_more($more) {
-    global $post;
-    return '<br><a class="btn btn-default btn-xs" role="button" href="'. get_permalink($post->ID) . '">Read more &raquo;</a>';
-}
-add_filter('excerpt_more', 'new_excerpt_more');
-
 function bc_wp_title( $title, $sep ) {
     global $paged, $page;
 
