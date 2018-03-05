@@ -29,7 +29,7 @@
                     <div class="col-md-6 text-right contact">
                         <?php if ( get_option('header_btn_link') ) { ?>
                             <div class="contact-btn">
-                                <a href="<?php echo esc_attr( get_option('header_btn_link') ); ?>" type="button" class="btn btn-default">
+                                <a href="<?php echo esc_attr( get_option('header_btn_link') ); ?>" type="button" class="btn btn-default btn-lg">
                                     <?php echo esc_attr( get_option('header_btn_text') ); ?>
                                 </a>
                             </div>
