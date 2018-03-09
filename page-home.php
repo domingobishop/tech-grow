@@ -44,14 +44,14 @@ get_header(); ?>
             <div class="container">
                 <div class="row">
                     <div class="col-md-10 col-md-offset-1">
-                        <div class="row promo-area section-2">
+                        <div id="products" class="row promo-area section-2">
                             <?php for ( $i=1 ; $i<=4 ; $i++ ) { ?>
                                 <?php if ( get_option('promo_url_'.$i) ) { ?>
                                 <div class="col-md-6">
                                     <div class="promo-item">
                                         <a href="<?php echo esc_attr(get_option('promo_url_'.$i)); ?>">
                                             <div class="promo-img">
-                                                <img src="<?php echo esc_attr(apply_https(get_option('promo_img_'.$i))); ?>" class="img-responsive">
+                                                <img src="<?php echo esc_attr(apply_https(get_option('promo_img_'.$i))); ?>" class="img-responsive img-centre">
                                             </div>
                                             <div class="promo-logo">
                                                 <img src="<?php echo esc_attr(apply_https(get_option('promo_logo_'.$i))); ?>" class="img-responsive">

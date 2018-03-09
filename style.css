@@ -206,12 +206,17 @@ footer .facebook-widget {
     border: 1px solid #ddd;
     border-radius: 4px;
     box-shadow: 0 4px 5px #ddd;
+    height: 374px;
+    overflow: hidden;
 }
 .promo-logo img {
     margin: 0 auto;
     max-width: 140px;
     height: auto;
     padding: 0.5em;
+}
+.promo-img img {
+    margin: auto;
 }
 .promo-img {
     max-height: 240px;
