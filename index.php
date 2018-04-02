@@ -91,7 +91,3 @@
     </main>
 
 <?php get_footer(); ?>
-<!-- 
-Chris Bishop
-This is a note  
--->
