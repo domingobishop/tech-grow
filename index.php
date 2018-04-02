@@ -91,4 +91,7 @@
     </main>
 
 <?php get_footer(); ?>
-<!-- Chris Bishop -->
+<!-- 
+Chris Bishop
+This is a note  
+-->
